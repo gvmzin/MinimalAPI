@@ -9,6 +9,7 @@ namespace MinimalAPI.Dominio.Servicos;
 public class AdministradorServico : IAdministradorServico
 {
     private readonly DbContexto _contexto;
+
     public AdministradorServico(DbContexto contexto)
     {
         _contexto = contexto;
@@ -34,11 +35,12 @@ public class AdministradorServico : IAdministradorServico
         return adm;
     }
 
-    public List<Administrador> Todos(int pagina)
+    public List<Administrador> Todos(int? pagina)
     {
         var query = _contexto.Administradores.AsQueryable();
 
         int itensPorPagina = 10;
+
         if (pagina != null)
         {
             query = query.Skip(((int)pagina - 1) * itensPorPagina).Take(itensPorPagina);
