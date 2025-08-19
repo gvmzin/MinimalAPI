@@ -122,4 +122,4 @@ Abaixo estão listados os endpoints disponíveis na aplicação.
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://www.google.com/search?q=LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT.
